@@ -59,7 +59,7 @@
 			$.post(tagsCreateUrl, {
 				title:  root.find('.js-tag-name').val(),
 				name: root.find('.js-tag-code').val(),
-				parent_name: root.find('.js-tag-parent').val()
+				parent_name: root.find('.js-tag-parent').data('tag').value
 			});
 		};
 
