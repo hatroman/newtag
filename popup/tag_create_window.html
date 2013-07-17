@@ -1,0 +1,201 @@
+<style>
+    /** autocomplete size **/
+    .ui-autocomplete {
+        max-height: 200px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+    }
+        /* IE 6 doesn't support max-height
+         * we use height instead, but this forces the menu to always be this tall
+         */
+    * html .ui-autocomplete {
+        height: 200px;
+    }
+
+    /** clearfix **/
+    /* For modern browsers */
+    .cl:before,
+    .cl:after {
+        content: "";
+        display: table;
+    }
+    .cl:after {
+        clear: both;
+    }
+    /* для IE6-7 */
+    .cl {
+        zoom: 1;
+    }
+
+    /** floats **/
+    .fl {
+        float:left;
+    }
+
+    .fr {
+        float:right;
+    }
+</style>
+
+<div class="tags-window-carrier">
+	<div class="window-header">Создание нового тега</div>
+	<div class="tags-window-block window-block">
+		<div class="left-column">
+
+			<div class="tag-data-block">
+				<div class="line">
+					<input class="general-input wide-general-input js-placeholder center js-tag-name" data-mask="ru" maxlength="50" type="text" placeholder="Введите тег">
+				</div>
+				<div class="line">
+					<input class="general-input wide-general-input js-placeholder center js-tag-code" data-mask="en" maxlength="50" type="text" placeholder="Введите web name">
+				</div>
+
+				<div class="mother-tag-block">
+					<div class="header-block">Выберите родительский тег:</div>
+				</div>
+				<div class="search-tag-block">
+					<div class="header-block ui-front">
+						<input class="general-input js-placeholder center js-tag-parent" type="text" placeholder="Начните вводить тег">
+						<div class="cl"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="right-column">
+			<div class="tree-tag-carrier">
+				<div class="header-block">
+					<a class="general-button small-general-button blue-button fr animate" href="javascript:void(0);">Выбрать родительское слово</a>
+					Дерево тегов
+					<div class="cl"></div>
+				</div>
+				<div class="tag-search-block">
+					<input type="text" class="js-placeholder" placeholder="Введите название тега">
+				</div>
+				<div class="content-block">
+
+					<div class="column-block">
+						<div class="line-block">
+							<div class="line-name">
+								<label>Красота <input class="styled-input" type="radio" name="some-group-1"></label>
+							</div>
+						</div>
+						<div class="line-block">
+							<div class="line-name">
+
+								<label>Психология <input class="styled-input" type="radio" name="some-group-1"></label>
+							</div>
+						</div>
+						<div class="line-block">
+							<div class="line-name">
+
+								<label>Звезды <input class="styled-input" type="radio" name="some-group-1"></label>
+							</div>
+						</div>
+						<div class="line-block">
+							<div class="line-name">
+								<span class="icon-block inline-block"></span>
+								<label>Мода <input class="styled-input" type="radio" name="some-group-1"></label>
+							</div>
+							<div class="column-block">
+
+								<div class="line-block">
+									<div class="line-name">
+
+										<label>Красота <input class="styled-input" type="radio" name="some-group-1"></label>
+									</div>
+								</div>
+								<div class="line-block">
+									<div class="line-name">
+
+										<label>Психология <input class="styled-input" type="radio" name="some-group-1"></label>
+									</div>
+								</div>
+								<div class="line-block">
+									<div class="line-name">
+										<span class="icon-block inline-block tree-expand-trigger"></span>
+										<label>Звезды <input class="styled-input" type="radio" name="some-group-1"></label>
+									</div>
+									<div class="column-block">
+
+										<div class="line-block">
+											<div class="line-name">
+
+												<label>Красота <input class="styled-input" type="radio" name="some-group-1"></label>
+											</div>
+										</div>
+										<div class="line-block">
+											<div class="line-name">
+
+												<label>Психология <input class="styled-input" type="radio" name="some-group-1"></label>
+											</div>
+										</div>
+										<div class="line-block">
+											<div class="line-name">
+
+												<label>Здоровье <input class="styled-input" type="radio" name="some-group-1"></label>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="line-block">
+									<div class="line-name">
+
+										<label>Мода <input class="styled-input" type="radio" name="some-group-1"></label>
+									</div>
+								</div>
+								<div class="line-block">
+									<div class="line-name">
+
+										<label>Красота <input class="styled-input" type="radio" name="some-group-1"></label>
+									</div>
+								</div>
+								<div class="line-block">
+									<div class="line-name">
+
+										<label>Психология <input class="styled-input" type="radio" name="some-group-1"></label>
+									</div>
+								</div>
+								<div class="line-block">
+									<div class="line-name">
+
+										<label>Здоровье <input class="styled-input" type="radio" name="some-group-1"></label>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="line-block">
+							<div class="line-name">
+
+								<label>Красота <input class="styled-input" type="radio" name="some-group-1"></label>
+							</div>
+						</div>
+						<div class="line-block">
+							<div class="line-name">
+
+								<label>Психология <input class="styled-input" type="radio" name="some-group-1"></label>
+							</div>
+						</div>
+						<div class="line-block">
+							<div class="line-name">
+
+								<label>Здоровье <input class="styled-input" type="radio" name="some-group-1"></label>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="cl"></div>
+		<div class="line button-block">
+			<div class="general-button small-border-button grey-button pie animate fl close-window">Отмена</div>
+			<div class="general-button small-border-button blue-button pie animate fr close-window js-create-tag">Создать тег</div>
+			<div class="cl"></div>
+		</div>
+	</div>
+</div>

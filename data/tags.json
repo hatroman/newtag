@@ -1,0 +1,136 @@
+{"tags": [
+	{
+		"title": "Звезды",
+		"name": "tag-1"
+	},
+	{
+		"title": "Мода",
+		"name": "tag-2"
+	},
+	{
+		"title": "Красота",
+		"name": "tag-3"
+	},
+	{
+		"title": "Дом",
+		"name": "tag-4",
+		"children": [
+			{
+				"title": "Хобби",
+				"name": "subtag-4-1"
+			},
+			{
+				"title": "Рукоделие",
+				"name": "subtag-4-2"
+			},
+			{
+				"title": "Интерьер",
+				"name": "subtag-4-3"
+			},
+			{
+				"title": "Домашние животные",
+				"name": "subtag-4-4"
+			},
+			{
+				"title": "Бытовая техника",
+				"name": "subtag-4-5",
+				"children": [
+					{
+						"title": "Кухонная",
+						"name" : "kitchen"
+					},
+					{
+						"title": "В ванную комнату",
+						"name" : "bathroom"
+					}
+				]
+			},
+			{
+				"title": "субтег 4-6",
+				"name": "subtag-4-6"
+			},
+			{
+				"title": "субтег 4-7",
+				"name": "subtag-4-7",
+				"children": [
+					{
+						"title": "субтег 4-7-1",
+						"name": "subtag-4-7-1"
+					},
+					{
+						"title": "субтег 4-7-2",
+						"name": "subtag-4-7-2"
+					},
+					{
+						"title": "субтег 4-7-3",
+						"name": "subtag-4-7-3"
+					},
+					{
+						"title": "субтег 4-7-4",
+						"name": "subtag-4-7-4"
+					},
+					{
+						"title": "субтег 4-7-5",
+						"name": "subtag-4-7-5"
+					},
+					{
+						"title": "субтег 4-7-6",
+						"name": "subtag-4-7-6"
+					},
+					{
+						"title": "субтег 4-7-7",
+						"name": "subtag-4-7-7"
+					},
+					{
+						"title": "субтег 4-7-8",
+						"name": "subtag-4-7-8"
+					},
+					{
+						"title": "субтег 4-7-9",
+						"name": "subtag-4-7-9"
+					},
+					{
+						"title": "субтег 4-7-10",
+						"name": "subtag-4-7-10"
+					}
+				]
+			},
+			{
+				"title": "субтег 4-8",
+				"name": "subtag-4-8"
+			},
+			{
+				"title": "субтег 4-9",
+				"name": "subtag-4-9"
+			},
+			{
+				"title": "субтег 4-10",
+				"name": "subtag-4-10"
+			}
+		]
+	},
+	{
+		"title": "Любовь",
+		"name": "tag-5"
+	},
+	{
+		"title": "Психология",
+		"name": "tag-6"
+	},
+	{
+		"title": "Здоровье",
+		"name": "tag-7"
+	},
+	{
+		"title": "Дети",
+		"name": "tag-8"
+	},
+	{
+		"title": "Стиль",
+		"name": "tag-9"
+	},
+	{
+		"title": "Энциклопедия звезд",
+		"name": "tag-10"
+	}
+]}

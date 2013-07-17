@@ -1,0 +1,260 @@
+/* BUTTONS
+***********/
+
+.general-button {
+	display: inline-block;
+	height: 32px;
+	padding: 0 10px;
+	margin: 0 2px;
+	border: 1px solid #225985;
+
+	background: #fff;
+
+	font: normal 12px/32px Arial, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	color: #225985;
+	cursor: pointer;
+
+	-webkit-border-radius: 5px;
+			border-radius: 5px;
+
+	/*text-shadow: 0 1px 1px rgba(0,0,0,.3);*/
+	/*-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);*/
+		/*-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);*/
+			/*box-shadow: 0 1px 2px rgba(0,0,0,.2);*/
+
+	vertical-align: baseline;
+	outline: none;
+
+	*display: inline;
+	*zoom: 1;
+}
+
+.general-button:hover {
+	background: #ededed;
+}
+
+.general-button.disabled:hover {
+	background: #fff;
+}
+
+input.general-button
+, button.general-button {
+	height: 34px;
+	*vertical-align: top;
+	*min-width: 0;
+	*padding: 0;
+}
+
+input.general-button.middle-button
+, button.general-button.middle-button {
+	*vertical-align: middle;
+}
+
+.general-button.disabled {
+	cursor: default;
+}
+
+.important-button {
+	border-color: #f9eed2 !important;
+}
+
+	/* small button */
+
+.small-general-button {
+	height: 18px;
+	padding: 0 5px;
+	line-height: 18px;
+}
+
+input.small-general-button
+, button.small-general-button
+{
+	height: 20px;
+}
+
+	/* wide button */
+
+.padding-button {
+	padding: 0 30px;
+}
+
+.wide-button {
+	display: block;
+}
+
+.multiline-button {
+	height: auto;
+}
+
+	/* border button */
+
+.double-border-button {
+	height: 30px;
+	line-height: 30px;
+	border-width: 2px;
+}
+
+input.double-border-button
+, button.double-border-button
+{
+	height: 34px;
+}
+
+/* Color Buttons
+****************/
+
+	/* Blue */
+
+.blue-button {
+	color: #d9eef7;
+	border: solid 1px #225985;
+	background: #4c96d1;
+}
+
+.blue-button:hover {
+	color: #d9eef7;
+	background: #225985;
+}
+
+.blue-button.disabled
+, .blue-button.disabled:hover
+{
+	color: #225985;
+	background: #c9dff1;
+}
+
+	/* Red */
+
+.red-button {
+	color: #faddde;
+	border: solid 1px #980c10;
+	background: #fe3e3e;
+}
+
+.red-button:hover {
+	color: #faddde;
+	background: #c50101;
+}
+
+.red-button.disabled
+, .red-button.disabled:hover
+{
+	color: #c50101;
+	background: #f9eed2;
+}
+
+	/* Orange */
+
+.orange-button {
+	color: #a37b24;
+	border: solid 1px #eecd85;
+	background: #eedcb4;
+}
+
+.orange-button:hover {
+	color: #a37b24;
+	background: #e5c98a;
+}
+
+.orange-button.disabled
+, .orange-button.disabled:hover
+{
+	color: #a37b24;
+	background: #fff;
+}
+
+/* Grey ? Нужна ли она проверить */
+
+/*.grey-button {*/
+/*color: #e9e9e9;*/
+/*border: solid 1px #555;*/
+/*background: #6e6e6e;*/
+/*}*/
+
+/*.grey-button:hover {*/
+/*color: #e9e9e9;*/
+/*background: #616161;*/
+/*}*/
+
+/*-*/
+
+/* INPUT
+*********/
+
+.general-input {
+	display: inline-block;
+	width: 150px;
+	padding: 4px 10px;
+	margin: 0;
+	border: 1px solid #999;
+
+	font: normal 12px/15px Arial, sans-serif;
+	text-decoration: none;
+
+	-webkit-border-radius: 3px;
+			border-radius: 3px;
+
+	*display: inline;
+	*zoom: 1;
+}
+
+.general-input[disabled] {
+	background: #cfcfcf;
+}
+
+.small-general-input {
+	width: 50px;
+}
+
+.wide-general-input {
+	width: 300px;
+}
+.date-general-input{
+	width:100px;
+}
+
+/* SELECT
+**********/
+
+.general-select {
+	width: 180px;
+	font: normal 12px/21px Arial, sans-serif;
+}
+
+.small-general-select {
+	width: 100px;
+}
+
+.wide-general-select {
+	width: 260px;
+}
+
+/* TEXTAREA
+************/
+
+.general-textarea {
+	display: block;
+	height: 100px;
+	width: 90%;
+	padding: 9px;
+	margin: 0;
+
+	border: 1px solid #999;
+	-webkit-border-radius: 3px;
+		border-radius: 3px;
+
+	font: normal 12px/15px Arial, sans-serif;
+	text-decoration: none;
+	color: #333;
+
+	resize: none;
+}
+
+div.general-textarea {
+	overflow: auto;
+	cursor: default;
+}
+
+/*-*/

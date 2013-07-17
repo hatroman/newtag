@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title>Создание тега</title>
+	<link rel="stylesheet" href="css/window.css"/>
+	<link rel="stylesheet" href="css/buttons.css"/>
+	<link rel="stylesheet" href="css/test.css"/>
+	<link rel="stylesheet" href="css/jqueryui/redmond/jquery-ui-1.10.0.custom.min.css"/>
+	<script src="js/lib/jquery-1.8.3.min.js"></script>
+	<script src="js/lib/jquery-ui-1.10.1.custom.min.js"></script>
+	<script src="js/popup.js"></script>
+	<script src="js/js.js"></script>
+</head>
+<body>
+<h1>Тестовое задание</h1>
+
+<div class="container">
+	<p>Представим, что вы&nbsp;в&nbsp;составе большой команды разрабатываете сложный интерактивный сайт. Одной из&nbsp;сотен функций сайта является работа с&nbsp;тегами&nbsp;&mdash; тематическими метками материалов.</p>
+
+	<p>Ваша задача&nbsp;&mdash; обеспечить создание тегов на клиентской стороне.</p>
+
+	<p>Вся предварительная работа коллегами уже проведена: аналитики изучили и зафиксировали требования заказчика, дизайнеры нарисовали интерфейс, верстальщики его сверстали, серверные программисты обеспечили работу бэкенда.</p>
+
+	<p>Достигнута договорённость, о том, что всплывающее окно создания тега должно открываться по клику на элементы с классом
+		<var>show-create-tag-window</var>. Например, вот на эту кнопку:</p>
+	<div class="test-button">
+		<button class="show-create-tag-window" data-popup-url="popup/tag_create_window.html">Создать новый тег</button>
+	</div>
+</div>
+<div class="container">
+	<p>HTML-разметка диалога должна загружаться из файла, размещённого по адресу, указанному в атрибуте
+		<var>data-popup-url</var>. Сейчас по указанному адресу расположена
+		<a href="popup/tag_create_window.html">статическая вёрстка</a> окна, подготовленная верстальщиками. Наполнение его условно, в частности, указаны несуществующие теги. Реальный список тегов нужно загружать AJAX'ом c сервера. Для имитации обращения к серверу используйте загрузку из файла
+		<a href="data/tags.json">data/tags.json</a></p>
+
+	<p>Вам нужно изучить <a href="#req">требования к&nbsp;интерфейсу</a> разработать в&nbsp;файле
+		<a href="js/js.js">js/js.js</a> скрипт, обеспечивающий появление диалога при клике на кнопку. Элементы диалога должны вести себя в соответствии со спецификацией.</p>
+
+	<p>Все необходимые скрипты и стили уже подключены к главной странице, её содержимое править не&nbsp;нужно. Для открытия всплывающих окон используйте функцию
+		<var>popupOpen</var> из&nbsp;<a href="js/popup.js">js/popup.js</a> (менять её&nbsp;не&nbsp;нужно, т.&nbsp;к.&nbsp;она уже многократно используется в&nbsp;других интерфейсах сайта). Для организации выпадающего списка&nbsp;&mdash; <var>jQuery UI autocomplete</var> (подключен).</p>
+
+
+
+	<p>По завершению работы форма должна сгенерировать POST-запрос с параметрами <var>title</var>, <var>name</var>,
+		<var>parent_name</var> на адрес <var>/tag</var>.</p>
+
+	<p><a href="test.zip">Все файлы в одном архиве</a>.</p>
+</div>
+<div id="req" class="req">
+	<div class="container">
+		<h2>Спецификация требований к интерфейсу</h2>
+
+		<p class="req-img-wrap">
+			<img src="i/req.png" alt="" class="req-img"/>
+		</p>
+		<table class="confluenceTable">
+			<tbody>
+			<tr>
+				<td class="confluenceTd" data-highlight-colour="grey" colspan="1">Метка</td>
+				<td class="confluenceTd" data-highlight-colour="grey" colspan="1">Название</td>
+				<td class="confluenceTd" data-highlight-colour="grey" colspan="1">Взаимодействие</td>
+				<td class="confluenceTd" data-highlight-colour="grey" colspan="1">Описание</td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">1</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Пиктограмма "Закрыть"</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">При клике:<br>  Закрыть текущее окно без сохранения изменений
+				</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">2</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Поле "Название тега"</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">До 50 символов. Только русские буквы</p></td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">3</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Поле "Название тега, англ."</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">До 50 символов. Только английские буквы.&nbsp; Необязательное поле. Является частью url страницы тега.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">9</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Блок "Родительский тег"</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">У тега может не быть родительского тега. Тогда поле пустое. У тега может быть только 1 родительский тег</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">10</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Поле "Родительский тег"</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">Поле с автодополнением с 3го символа по всем тегам. Демонстрирует результаты с адресом родительского тега в скобках.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">12</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Блок "Дерево тегов"</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">Отображаются все теги системы в древовидной форме. Теги, имеющие дочерние теги отображаются с пиктограммами "Развернуть" / "Свернуть".<br> Возле каждого тега стоит "radiobutton".
+					<br>Активен тот тег, который выбран в блоке "Родительский тег". Пользователь может выбрать только 1 тег.
+				</p></td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">13</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Поле "Поиск"</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">При клике:<br> Очистить поле.
+					<br> По мере ввода текста, фильтровать и отобразить теги из дерева тегов, в которые входит данная строка, с отображением полного адреса тега.
+				</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">14</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Кнопка "Выбрать родительское слово"</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">При клике:<br> Добавить выбранный тег как родитеский к тегу, который в данный момент редактируется. Если родительский тег уже есть, заменить его на новый.<br>  Обновить блок "Родительский тег"
+				</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText"><br><br></p></td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">15</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Кнопка "Отмена"</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">При клике:<br>  Закрыть текущее окно без сохранения изменений
+				</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+			</tr>
+			<tr>
+				<td class="confluenceTd"><p class="AxureTableNormalText">16</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">Кнопка "Создать тег"</p></td>
+				<td class="confluenceTd"><p
+						class="AxureTableNormalText">При клике:<br>  Закрыть текущее окно. Сохранить изменения<br> Обновить список тегов
+				</p></td>
+				<td class="confluenceTd"><p class="AxureTableNormalText">&nbsp;</p></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container postscriptum">
+	<p>Если вам кажется, что какой-то информации не хватает, придумайте сами или проигнорируйте. Пожалуйста, зафиксируйте время, которое потребовалось вам для решения задачи. </p>
+	<p>Если какая-то часть работы кажется вам слишком трудоёмкой, пропустите её, описав в комментариях к коду принцип решения.</p>
+</div>
+</body>
+</html>
